@@ -1,0 +1,45 @@
+#reserve {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  background-color: #495E57;
+}
+
+#reserve section {
+  display: flex;
+  flex-direction: column;
+}
+
+#reserve section:first-of-type {
+  align-items: flex-start;
+  text-align: left;
+}
+
+#reserve h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: #F4CE14;
+}
+
+#reserve h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #EDEFEE;
+}
+
+#reserve p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  color: #EDEFEE;
+}
+
+#reserve img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}

@@ -15,7 +15,7 @@ function Header() {
       <nav className={isOpen ? "open" : ""}>
         <ul>
           <li><Link to="/">HOME</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
+          <li><a href="#about">ABOUT</a></li>
           <li><Link to="/reserve">RESERVATIONS</Link></li> {/* Updated */}
           <li><Link to="/online">ORDER ONLINE</Link></li>
           <li><Link to="/login">LOGIN</Link></li>
