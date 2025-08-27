@@ -1,5 +1,6 @@
 import '../css/Header.css';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +14,11 @@ function Header() {
 
       <nav className={isOpen ? "open" : ""}>
         <ul>
-          <li><a href="/">HOME</a></li>
-          <li><a href="/about">ABOUT</a></li>
-          <li><a href="/reservations">RESERVATIONS</a></li>
-          <li><a href="/online">ORDER ONLINE</a></li>
-          <li><a href="/login">LOGIN</a></li>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/reserve">RESERVATIONS</Link></li> {/* Updated */}
+          <li><Link to="/online">ORDER ONLINE</Link></li>
+          <li><Link to="/login">LOGIN</Link></li>
         </ul>
       </nav>
 

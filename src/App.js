@@ -6,16 +6,29 @@ import Testimonials from "./components/home/Testimonials";
 import About from "./components/home/About";
 import Footer from "./components/Footer";
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import R_Page from "./R_Page";
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Hero/>
-      <Highlights/>
-      <Testimonials/>
-      <About/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Hero />
+              <Highlights />
+              <Testimonials />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/reserve" element={<R_Page />} />
+      </Routes>
+    </Router>
   );
 }
 
