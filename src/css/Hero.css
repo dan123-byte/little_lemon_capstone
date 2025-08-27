@@ -1,0 +1,56 @@
+#hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  background-color: #495E57;
+}
+
+#hero section {
+  display: flex;
+  flex-direction: column;
+}
+
+#hero section:first-of-type {
+  align-items: flex-start;
+  text-align: left;
+}
+
+#hero h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: #F4CE14;
+}
+
+#hero h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #EDEFEE;
+}
+
+#hero p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.2rem;
+  color: #EDEFEE;
+}
+
+#hero button {
+  background-color: #F4CE14;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+#hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
