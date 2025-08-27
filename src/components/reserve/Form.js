@@ -1,4 +1,5 @@
 import '../../css/Form.css';
+import React, { useState, useEffect } from 'react';
 
 function Form({
     date, setDate,
@@ -12,6 +13,25 @@ function Form({
     dispatch,
     handleSubmit
   }) {
+    const [isValid, setIsValid] = useState(false);
+
+    useEffect(() => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^\+?\d{10,15}$/;
+
+      const formIsValid =
+        date &&
+        time &&
+        guests >= 1 &&
+        guests <= 20 &&
+        fullname.length >= 2 &&
+        emailRegex.test(email) &&
+        phoneRegex.test(phone) &&
+        occasion;
+
+      setIsValid(formIsValid);
+    }, [date, time, guests, fullname, email, phone, occasion]);
+
   return (
   <section id="form">
       <h1>Reservation Form</h1>
@@ -24,8 +44,9 @@ function Form({
               type="date"
               name="date"
               value={date}
-              onChange={setDate}
+              onChange={(e) => setDate(e.target.value)}
               required
+              min={new Date().toISOString().split("T")[0]}
             />
           </label>
           <label>
@@ -51,6 +72,7 @@ function Form({
               type="number"
               name="guests"
               min="1"
+              max="20"
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
               required
@@ -81,6 +103,7 @@ function Form({
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
               required
+              minLength="2"
             />
           </label>
         </div>
@@ -104,12 +127,16 @@ function Form({
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
+              pattern="^\+?\d{10,15}$"
+              title="Enter a valid phone number"
             />
           </label>
         </div>
 
         <div className="form-group button-group">
-          <button type="submit">Reserve Table</button>
+          <button type="submit" disabled={!isValid}>
+            Reserve Table
+          </button>
         </div>
       </form>
     </section>
