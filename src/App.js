@@ -8,11 +8,13 @@ import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import R_Page from "./R_Page";
+import ConfirmedBooking from "./components/reserve/Confirmed";
 
 function App() {
   return (
     <Router>
       <Routes>
+
         <Route
           path="/"
           element={
@@ -27,6 +29,8 @@ function App() {
           }
         />
         <Route path="/reserve" element={<R_Page />} />
+
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
     </Router>
   );

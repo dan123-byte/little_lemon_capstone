@@ -1,0 +1,124 @@
+#confirmed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  min-height: 60vh;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
+  font-family: 'Karla', sans-serif;
+}
+
+#confirmed h1 {
+  font-size: 2.5rem;
+  color: #495E57;
+  margin-bottom: 1rem;
+}
+
+#confirmed p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  #confirmed {
+    padding: 2rem 1rem;
+  }
+
+  #confirmed h1 {
+    font-size: 2rem;
+  }
+
+  #confirmed p {
+    font-size: 1rem;
+  }
+}
+
+#booking-table {
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 1.5rem;
+  background-color: #495E57;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#booking-table h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Markazi Text", serif;
+  color: #ffffff;
+}
+
+#booking-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Karla', sans-serif;
+}
+
+#booking-table th,
+#booking-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#booking-table th {
+  background-color: #495e57;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#booking-table tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+#booking-table tbody tr:hover {
+  background-color: #dbe9e0;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  #booking-table table,
+  #booking-table thead,
+  #booking-table tbody,
+  #booking-table th,
+  #booking-table td,
+  #booking-table tr {
+    display: block;
+  }
+
+  #booking-table thead {
+    display: none;
+  }
+
+  #booking-table tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  #booking-table tbody td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #booking-table tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    font-weight: 600;
+    text-align: left;
+  }
+}
