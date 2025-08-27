@@ -10,20 +10,31 @@ header img {
   height: 60px;
 }
 
-nav ul {
+header ul {
   display: flex;
   list-style: none;
   gap: 2rem;
   padding: 0;
 }
 
-nav ul li a {
+header ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-family: "Markazi Text", serif;
   font-size: 20px;
 }
+
+header ul li a:hover {
+  color: #F4CE14;
+  text-decoration: underline;
+}
+
+header ul li a.active {
+  font-weight: 800;
+  color: #F4CE14;
+}
+
 
 .burger {
   display: none;

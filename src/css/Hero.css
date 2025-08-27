@@ -46,6 +46,13 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: 3rem;
+  transition: all 0.3s ease;
+}
+
+#hero button:hover {
+  background-color: #495E57;
+  color: #F4CE14;
+  transform: scale(1.05);
 }
 
 #hero img {

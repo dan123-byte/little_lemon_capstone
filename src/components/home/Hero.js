@@ -1,4 +1,5 @@
 import '../../css/Hero.css';
+import { Link } from 'react-router-dom';
 
 function Hero() {
 
@@ -11,7 +12,9 @@ function Hero() {
           We are a family-owned Mediterranean restaurant,
           focused on traditional recipes served with a modern twist.
         </p>
-        <button>Reserve a Table</button>
+        <Link to="/reserve">
+          <button>Reserve a Table</button>
+        </Link>
       </section>
       <section>
         <img src="/assets/restaurant.jpg" alt="Restaurant" />
